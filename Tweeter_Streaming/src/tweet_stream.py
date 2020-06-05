@@ -22,13 +22,19 @@ class MiPrimerListener(tweepy.StreamListener):
     def on_data(self, raw_data):
         self.process_data(raw_data)
         return True
-    def listToString(self,s):
-        str1 = ""
-        for ele in s:
-            str1 += ele
-        return str1
     def process_data(self,raw_data):
-        data = json.loads(raw_data)
+        try:
+            data = json.loads(raw_data)
+        except Exception as e:
+            log = io.open("../log/logFile.txt","a",encoding="utf-8")
+            try:
+                log.write("Error en el parseo de datos \n"+str(e))
+            except Exception as e1:
+                log.write("Error de escritura en la linea 33\n")
+                return True
+            log.close()
+            print(e)
+            return True
         if data.get('geo') is not None:
             location = data.get('geo').get('coordinates')
         else:
@@ -47,7 +53,7 @@ class MiPrimerListener(tweepy.StreamListener):
         try:
             json_obj = json.loads(json_string,strict=False)
         except Exception as e:
-            log = io.open("logFile.txt","a",encoding="utf-8")
+            log = io.open("log/logFile.txt","a",encoding="utf-8")
             log.write(json_string+","+"\n")
             log.close()
             print(e)
