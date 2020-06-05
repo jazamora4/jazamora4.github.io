@@ -77,3 +77,4 @@ if __name__ == "__main__":
     stream = MaxStream(auth,listener)
     print("Capturando Tweets")
     stream.start()
+#py heatmap.py --debug -o photos.png -r 50 --width 1000 --osm -B 0.8 --osm_base http://b.tile.stamen.com/toner coordenadas.tweets.txt
