@@ -43,7 +43,7 @@ class MiPrimerListener(tweepy.StreamListener):
         user = '@' + data.get('user').get('screen_name')
         created = data.get('created_at')
         #Formateo de la cadena JSON
-        json_string = '{'+'"user":"'+user+'","geoLocation":{"type":"Point","coordinates":['+str(location[1])+','+str(location[0])+']},"created":"'+created+'","text":"'+text+'"}'
+        json_string = '{'+'"user":"'+user+'","geoLocation":{"type":"Point","coordinates":['+str(location[1])+','+str(location[0])+']},"created":"'+created+'","text":"'+full+'"}'
         try:
             json_obj = json.loads(json_string,strict=False)
         except Exception as e:
