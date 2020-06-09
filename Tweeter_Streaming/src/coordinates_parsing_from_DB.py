@@ -17,7 +17,7 @@ if os.path.exists("../cord_files/coordenadas.tweets.txt"):
     os.remove("../cord_files/coordenadas.tweets.txt")
 coords_file = io.open('../cord_files/coordenadas.tweets.txt','a',encoding="utf-8")
 #Query de los datos desde la base de datos
-Query = Coll_TweetsNew.find({"geoLocation.coordinates": {'$gte': -80.0,'$lte': -75.0}})
+Query = Coll_TweetsNew.find({'$and': [{'geoLocation.coordinates.0':{'$lte': -75,'$gte': -80}},{'geoLocation.coordinates.1':{'$lte':1.0,'$gte':-4.393909}}]})
 #Separacion de las coordenadas de cada Tweet
 for tweet in Query:
     coordinates = tweet.get("geoLocation").get("coordinates")

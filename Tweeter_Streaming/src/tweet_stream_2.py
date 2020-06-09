@@ -9,7 +9,7 @@ cadena_de_conexion = "mongodb+srv://dbJoseZamora:balto1010@gbd2020-uzfjc.mongodb
 gbd2020_Cluster=pymongo.MongoClient(cadena_de_conexion)
 
 DB_TweetsPrueba = gbd2020_Cluster.tweetsPrueba
-Coll_TweetsNew = DB_TweetsPrueba.tweetsNew
+Coll_TweetsNew = DB_TweetsPrueba.tweetsCorrupcion
 
 #-----------------------------------------------------------------------------
 #Listener de Tweets
@@ -46,6 +46,7 @@ class MiPrimerListener(tweepy.StreamListener):
         else:
             full=text
         full = full.replace('"','')
+        
         user = '@' + data.get('user').get('screen_name')
         created = data.get('created_at')
         #Formateo de la cadena JSON
@@ -53,17 +54,19 @@ class MiPrimerListener(tweepy.StreamListener):
         try:
             json_obj = json.loads(json_string,strict=False)
         except Exception as e:
-            log = io.open("../log/logFile.txt","a",encoding="utf-8")
+            log = io.open("log/logFile.txt","a",encoding="utf-8")
             log.write(json_string+","+"\n")
             log.close()
             print(e)
             print(json_string)
             return True
-        Coll_TweetsNew.insert_one(json_obj)#Incersion en la base de datos
-        if(location[0]!=0):
-            print("Tweet del usuario "+user+" ha sido guardo con geolocacion en la base de datos")
-        else:
-            print("Tweet del usuario "+user+" ha sido guardado en la base de datos")        
+        if('lenin moreno' in full.lower() || 'leninmoreno' in full.lower() || 'moreno' in full.lower() || 'fueramoreno' in full.lower() || '#fueramoreno' in full.lower() || 'corrupcion moreno' in full.lower() || 'apoyo moreno' in full.lower() || 'apoyo a lenin moreno' in full.lower()):
+            print("Corrupcion")
+            Coll_TweetsNew.insert_one(json_obj)#Incersion en la base de datos
+            if(location[0]!=0):
+                print("Tweet del usuario "+user+" ha sido guardo con geolocacion en la base de datos")
+            else:
+                print("Tweet del usuario "+user+" ha sido guardado en la base de datos")        
         return True
     def on_error(self, status_code):
         if status_code == 420:
@@ -83,4 +86,3 @@ if __name__ == "__main__":
     stream = MaxStream(auth,listener)
     print("Capturando Tweets")
     stream.start()
-#py heatmap.py --debug -o photos.png -r 50 --width 1000 --osm -B 0.8 --osm_base http://b.tile.stamen.com/toner coordenadas.tweets.txt
