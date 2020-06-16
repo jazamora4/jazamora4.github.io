@@ -94,8 +94,8 @@ if __name__ == "__main__":
     print("Iniciando....")
     listener = MiPrimerListener()
     
-    auth = tweepy.OAuthHandler("kwjqxgVZHHASKbaHH3khvuYAD","NMp1uVAhJo8S58SdipBybsGEsqW4rnw6hmhBEM2iNacB8dBLJC")
-    auth.set_access_token("1692205566-XdGIqqzrFzOSC7pXdXmzHKTsEnrXDDwpBUX9IkF","ZnvaT0oPKKkijx42e50rupugxEfnUnEpYnWSuftONjIbq")
+    auth = tweepy.OAuthHandler("claves de aplicacion","claves de aplicacion")
+    auth.set_access_token("tokens de aplicacion","tokens de aplicacion")
     stream = MaxStream(auth,listener)
     print("Capturando Tweets")
     stream.start()
