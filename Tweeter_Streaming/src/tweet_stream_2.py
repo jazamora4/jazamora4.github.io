@@ -46,7 +46,7 @@ class MiPrimerListener(tweepy.StreamListener):
         else:
             full=text
         full = full.replace('"','')
-        
+        full = full.replace('\n', ' ')
         user = '@' + data.get('user').get('screen_name')
         created = data.get('created_at')
         #Formateo de la cadena JSON
@@ -54,19 +54,32 @@ class MiPrimerListener(tweepy.StreamListener):
         try:
             json_obj = json.loads(json_string,strict=False)
         except Exception as e:
-            log = io.open("log/logFile.txt","a",encoding="utf-8")
+            log = io.open("../log/logFile.txt","a",encoding="utf-8")
             log.write(json_string+","+"\n")
             log.close()
             print(e)
             print(json_string)
             return True
-        if('lenin moreno' in full.lower() || 'leninmoreno' in full.lower() || 'moreno' in full.lower() || 'fueramoreno' in full.lower() || '#fueramoreno' in full.lower() || 'corrupcion moreno' in full.lower() || 'apoyo moreno' in full.lower() || 'apoyo a lenin moreno' in full.lower()):
-            print("Corrupcion")
-            Coll_TweetsNew.insert_one(json_obj)#Incersion en la base de datos
-            if(location[0]!=0):
-                print("Tweet del usuario "+user+" ha sido guardo con geolocacion en la base de datos")
-            else:
-                print("Tweet del usuario "+user+" ha sido guardado en la base de datos")        
+        flag = False
+        palabras = ['morenato','gobierno','lenin moreno','leninmoreno','@lenin','moreno','fueramoreno','#fueramoreno','fuera moreno','corrupcion moreno','moreno es bucaram','#morenoesbucaram','gobiernocorrupto','#gobiernocorrupto','#elperogobierno','elpeorgobierno','apoyo moreno','adelante moreno','fuerza moreno','apoyo a lenin moreno']
+        for x in palabras:
+            if(x in full.lower()):
+                back =  io.open("../log/logBackTweets2.txt","a",encoding="utf-8")
+                back.write(json_string+',\n')
+                back.close()
+                flag = True
+                print(full+" ...aceptado")
+                Coll_TweetsNew.insert_one(json_obj)#Incersion en la base de datos
+                if(location[0]!=0):
+                    print("Tweet del usuario "+user+" ha sido guardo con geolocacion en la base de datos")
+                else:
+                    print("Tweet del usuario "+user+" ha sido guardado en la base de datos")
+                break
+        if(flag == False):
+            print(full+" ...no apto")
+            back =  io.open("../log/logBackTweets.txt","a",encoding="utf-8")
+            back.write(json_string+',\n')
+            back.close() 
         return True
     def on_error(self, status_code):
         if status_code == 420:

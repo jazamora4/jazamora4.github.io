@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cool-state-265112",
+  "private_key_id": "95fcedcc87965fa97fe3d69c6b565bb888fbf0c1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDqppu3XIcXn7nw\n7jZn5JgVjlaeYpOx3jbOJ1cLSNB3o6nvZ/i65sLIRo5EJBW03vouKDyxTbAiN/e4\nShBkIyEUkfO7u4qc7cB4DHBqhTUZhnvj5T+IedNHkbEP3FKSoirX7Mxlojek7tDF\noSV12EgPB4527VGvOskKBIAVTR+IOFO89S2SozGIpZS5DDediP7bST2LPQ52w/mw\n71AsUFP23s5sK9Mlbp9UTyhf8zsV6Hw4wI7qmV9BytvDbmU8XkJURN5p4dSf6cqr\nIZlpl/PWZJXodz0WaI5RaIzW9tP8gc4NAp6Q4I1mAn4iFvgUUg45MB0psDH18fl5\n8Ofy/2yFAgMBAAECggEABbHWbJxHwQiE1DaLxnizQi6qpnxg9juc2+Lzh1gUixrD\nOIau8CZCiua/dCLmDfYtXypl0q2+fQ4bqnLNtAhwOJYUMrWp9wYEGkW/Aq7J650q\na4z4PkEqof2ErQxdSqa54HSkP0ExFYUgNvOiu5nsocS+rd8zkMud7mrOivXMspsT\nc4YwL1qizY/Dvg6bSBHm0xxEzkuqjZhrhXrt4gi5PgK06/2cdChKQmPXjRXDMwbY\nSbSevGCEDYrDrcKyxqd+arRCm2sKXJPoRkjXUNh9qFQji7FFA6tq0c1rk0weGEVl\nYuZuJdDoSeuHy4Hub7gfwc0sdKlG/XG5FoGVQ0DCrwKBgQD3yyY7DioOTEsuutu3\n5f5zXRzvxMDzqy4N7jPx5GmnSOeqoWksfDtcSWfimDxsdx2dTlkzW/kucyE+Yv15\nGZhtS6qj9RjzAycs2wN2vx94Imsznnwk+8JYGa22S0Mcj0vLmHtpqfKLBbkVjQZS\nbznz/Wct3lqZjpZbYVgLy2bazwKBgQDybAgiJ08Fv8M2TFuUnN+gfuHgEtzdBtJX\nS41bY7qwbKAndlVzmEK6Hu0Tkt7CQrf9AZiemHvoC8ZPTyh8iWtIfMixxq/391XA\n823K1aNMAjs8K23SgCSQUUh/rNPszSRcD1EJkLqlxh7NF84Z1KWWGdWb3YZryIpz\nU1GDafyIawKBgALgmAQNiQ17c1AKmWyMPiUmyqQ6G6d4sGM3BeFkLpnjrdT8ZNVA\naAwNSiiGbgUwaOaft0dyZPVWHuezjI/wbSWvwD6BJRYFTlol/OdPFtV1SNtjlrtz\nNPGC8tJwE0psm4u0rJIwiAF3QovuhElGw1yC78THlTO9RR+whK42YW5fAoGBAL1f\n30qu4nBfSSQVqkUB9z/tXo4orhiLx60h/B80XRaNBN9O9ZoDi7zRg+oShanDbO9c\nW9kozUKMUDKMZ9hBkWli8XTO/Y/7yyWcBFy7X4F1DMkINBaIvAdxN+1lGXiXGJxB\n6tBKG0R87HrS6dIL5/7F17SW7PcuBdnpcHf0R65ZAoGBAIvD/g8Dhbcvwn9vy9Ai\nWssxSB2au5L2j2JPgJfeqjaGdLYAQMujTKf99Vud/DBJKEMUib10angtQSyA+3Ld\nehLDRJUNxn6eXkHMJI5dOtkR0t/KtFRcobRe6nmNBj3eeTUJzLxBXDHeiKjLzpk5\nWrDH2ggr7M+awKbcJfKfokXx\n-----END PRIVATE KEY-----\n",
+  "client_email": "translate@cool-state-265112.iam.gserviceaccount.com",
+  "client_id": "116539254258688733922",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/translate%40cool-state-265112.iam.gserviceaccount.com"
+}

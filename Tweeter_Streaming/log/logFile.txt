@@ -18,3 +18,7 @@
 {"user":"@ManuelE83409862","geoLocation":{"type":"Point","coordinates":[0,0]},"created":"Mon Jun 08 02:45:32 +0000 2020","text":"@karly_bsc Pero por su puesto Karly.. \m/ un Solo Ídolo tiene el Ecuador 🇪🇨"},
 {"user":"@ErickDeww","geoLocation":{"type":"Point","coordinates":[0,0]},"created":"Mon Jun 08 22:23:37 +0000 2020","text":"Mi último beef por hoy y me largo al valorant, el chiste se cuenta solo arrogante pedazo de escoria. @MaryDouh 
 Me dio dos dólares WHOu lEgIT ¯\_(ツ)_/¯ https://t.co/XzKJ2PtENC"},
+{"user":"@ErickDeww","geoLocation":{"type":"Point","coordinates":[0,0]},"created":"Wed Jun 10 17:54:37 +0000 2020","text":"Se toman todo enserio, mucha arena en la vagina¯\_(ツ)_/¯"},
+{"user":"@el_javU_U","geoLocation":{"type":"Point","coordinates":[0,0]},"created":"Thu Jun 11 16:44:41 +0000 2020","text":"@el__dass Con respecto al comentario es a muchas veces mentalidad, el emprendedor tiene en su mente que los bienes deben generar ingresos el empleado lo piensa al revés... ¯\_(ツ)_/¯ (pa los burócratas es una carrera antes que se les acabe la teta)"},
+{"user":"@el_javU_U","geoLocation":{"type":"Point","coordinates":[0,0]},"created":"Thu Jun 11 18:42:20 +0000 2020","text":"Tanta Plata y contratas un abogado que no puede ser coherente frente a una cámara ¯\_(ツ)_/¯"},
+{"user":"@ronalvera459","geoLocation":{"type":"Point","coordinates":[0,0]},"created":"Sat Jun 13 00:48:13 +0000 2020","text":"@rodrigooaguirre Es un poema de gol 🥅 💪 \U/🏆 🏆 🏆 🏆"},
